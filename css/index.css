@@ -210,6 +210,22 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+.headers {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.bold {
+  font-weight: 800;
+}
+.bold-italic {
+  font-weight: 800;
+  font-style: italic;
+}
 header {
   padding: 20px 0 10px;
   background: linear-gradient(90deg, rgba(20, 20, 20, 0.8) 0%, rgba(0, 0, 0, 0.5)), url(/img/cover.jpg);
@@ -236,8 +252,22 @@ header .container .main-nav {
   width: 100%;
   color: #FFFFFF;
 }
+@media (max-width: 375px) {
+  header .container .main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 header .container .main-nav nav {
   margin-top: 30px;
+}
+@media (max-width: 375px) {
+  header .container .main-nav nav {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
 }
 header .container .main-nav nav a {
   margin-right: 10px;
@@ -263,6 +293,19 @@ header .container .intro h1 {
   font-size: 4.6rem;
   margin-bottom: 40px;
 }
+@media (max-width: 375px) {
+  header .container .intro h1 {
+    font-size: 3.6rem;
+  }
+}
+@media (max-width: 375px) {
+  header .container .intro .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 header .container .intro .buttons a {
   background: #00887A;
   border: 1px solid #FFFFFF;
@@ -276,7 +319,7 @@ header .container .intro .buttons a {
   font-size: 1.4rem;
   transition: all 0.3s;
   border: 1px solid #00887A;
-  margin: 0 5px;
+  margin: 0 5px 10px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -320,6 +363,14 @@ header .container .intro .buttons .reverse-button:hover {
   align-items: flex-start;
   flex-direction: row;
 }
+@media (max-width: 375px) {
+  .footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+}
 .footer .container p {
   color: #FFFFFF;
   margin-top: 7px;
@@ -334,9 +385,18 @@ header .container .intro .buttons .reverse-button:hover {
   color: #FFFFFF;
   font-size: 1.8rem;
   margin-right: 10px;
+  transition: 0.3s all;
+}
+.footer .container .social-medias a:hover {
+  color: #de9151;
 }
 .footer .container .social-medias img {
   max-height: 35px;
+}
+.main-section h1,
+.main-section h2,
+.main-section h3 {
+  color: #de9151;
 }
 .main-section .introduction {
   display: flex;
@@ -344,11 +404,30 @@ header .container .intro .buttons .reverse-button:hover {
   align-items: flex-start;
   flex-direction: row;
   margin-top: 40px;
-  padding: 60px 0;
+  margin-bottom: 40px;
+  padding: 40px 0;
   border-bottom: 1px solid #ccc;
+}
+@media (max-width: 500px) {
+  .main-section .introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 .main-section .introduction .intro-boxes {
   width: 48%;
+}
+@media (max-width: 500px) {
+  .main-section .introduction .intro-boxes {
+    width: 98%;
+  }
+}
+@media (max-width: 375px) {
+  .main-section .introduction .intro-boxes {
+    text-align: center;
+  }
 }
 .main-section .introduction .intro-boxes p {
   margin-bottom: 15px;
@@ -378,6 +457,11 @@ header .container .intro .buttons .reverse-button:hover {
   border: 10px solid #00887A;
   background: #00887A;
 }
+@media (max-width: 500px) {
+  .main-section .introduction .intro-boxes .image-border {
+    margin-bottom: 40px;
+  }
+}
 .main-section .introduction .intro-boxes .image-border img {
   margin-top: -40px;
 }
@@ -398,23 +482,42 @@ header .container .intro .buttons .reverse-button:hover {
   flex-direction: column;
   text-align: center;
 }
+@media (max-width: 375px) {
+  .main-section .box-section .box {
+    width: 48%;
+  }
+}
 .main-section .box-section .box i {
   font-size: 4.8rem;
   margin-bottom: 20px;
   color: #de9151;
 }
 .team-profile {
-  margin-top: 80px;
+  margin-top: 40px;
+}
+.team-profile h1,
+.team-profile h2,
+.team-profile h3 {
+  color: #de9151;
 }
 .team-profile .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
 }
+@media (max-width: 375px) {
+  .team-profile .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
 .team-profile .container .box {
-  width: 31.5%;
+  flex-basis: 25%;
+  padding: 10px;
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
@@ -422,11 +525,47 @@ header .container .intro .buttons .reverse-button:hover {
   flex-direction: column;
   text-align: center;
 }
+@media (max-width: 1024px) {
+  .team-profile .container .box {
+    flex-basis: 33.333%;
+  }
+}
+@media (max-width: 767px) {
+  .team-profile .container .box {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 375px) {
+  .team-profile .container .box {
+    flex-basis: 80%;
+    margin-bottom: 10px;
+  }
+}
+.team-profile .container .box p.name {
+  padding-bottom: 0;
+  font-weight: 800;
+  color: #de9151;
+  line-height: 1.3rem;
+}
 .team-profile .container .box .image-border {
   border: 10px solid #00887A;
   background: #00887A;
   margin-bottom: 20px;
+  width: 100%;
 }
 .team-profile .container .box .image-border img {
-  margin-top: -40px;
+  margin-top: -20px;
+  max-height: 180px;
+  width: 100vh;
+  height: 100vh;
+}
+@media (max-width: 500px) {
+  .team-profile .container .box .image-border img {
+    max-height: 160px;
+  }
+}
+@media (max-width: 375px) {
+  .team-profile .container .box .image-border img {
+    max-height: 180px;
+  }
 }
